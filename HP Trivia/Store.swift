@@ -30,6 +30,9 @@ class Store: ObservableObject {
     func loadProducts() async {
         do {
             products = try await Product.products(for: productsIDs)
+            products.sort {
+                $0.displayName < $1.displayName
+            }
         } catch {
             print("Couldn't fetch those products: \(error)")
         }
