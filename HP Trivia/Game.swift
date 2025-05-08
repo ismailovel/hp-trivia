@@ -33,7 +33,7 @@ class Game: ObservableObject {
         answeredQuestions = []
     }
     
-    func filteredQuestions(to books: [Int]) {
+    func filterQuestions(to books: [Int]) {
         filteredQuestions = allQuestions.filter { books.contains($0.book) }
     }
     
