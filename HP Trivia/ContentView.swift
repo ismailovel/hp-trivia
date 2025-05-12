@@ -168,7 +168,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .animation(.easeInOut.delay(3), value: store.books.contains(.active) ? false : true)
+                    .animation(.easeInOut.delay(3), value: animateViewsIn)
                     
                     Spacer()
                 }
